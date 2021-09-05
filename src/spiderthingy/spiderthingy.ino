@@ -1,3 +1,6 @@
+// spider-thingy
+// 4 legged spider based of of countless other ideas
+
 void setup() {
   // put your setup code here, to run once:
 
