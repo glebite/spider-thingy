@@ -6,7 +6,6 @@
 // spider-thingy
 // 4 legged spider based of of countless other ideas
 ServoEasing Servo1;
-int SERVO1_PIN = 9;
 
 uint16_t sServoSpeed = 90;
 
@@ -17,7 +16,7 @@ void setup() {
   Serial.begin(9600);
   Serial.print(F("Attach servo on pin "));
   Serial.println(SERVO1_PIN);
-  if (Servo1.attach(SERVO1_PIN) = INVALID_SERVO) {
+  if (Servo1.attach(SERVO1_PIN) == INVALID_SERVO) {
     Serial.println(F("Error connecting to the servo"));
   }
 }
