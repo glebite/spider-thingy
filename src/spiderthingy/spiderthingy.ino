@@ -1,10 +1,12 @@
 #include <ServoEasing.h>
-// #include "PinDefinitionsAndMore.h"
+#include <Arduino.h>
+#include "PinDefinitionsAndMore.h"
+
 
 // spider-thingy
 // 4 legged spider based of of countless other ideas
 ServoEasing Servo1;
-ServoEasing Servo2;
+int SERVO1_PIN = 9;
 
 uint16_t sServoSpeed = 90;
 
@@ -13,6 +15,11 @@ uint16_t sServoSpeed = 90;
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
+  Serial.print(F("Attach servo on pin "));
+  Serial.println(SERVO1_PIN);
+  if (Servo1.attach(SERVO1_PIN) = INVALID_SERVO) {
+    Serial.println(F("Error connecting to the servo"));
+  }
 }
 
 void loop() {
