@@ -24,4 +24,8 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  Servo1.setSpeed(10);
+  Servo1.easeTo(90);
+  Servo1.startEaseTo(180,30);
+  delay(1000);
 }
