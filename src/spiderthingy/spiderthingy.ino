@@ -3,10 +3,12 @@
 #include <ServoEasing.h>
 #include "PinDefinitionsAndMore.h"
 
+#define INFO
 
 // spider-thingy
 // 4 legged spider based of of countless other ideas
-ServoEasing Servo1;
+const int SERVO1_PCA9685_PIN = 9;
+cosnt int SERVO1_PIN = 9;
 
 uint16_t sServoSpeed = 90;
 
